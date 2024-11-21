@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="universityApp">
+<head>
+    <title>Display Students</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body ng-controller="DisplayController">
+    <h1>Registered Students</h1>
+
+    <!-- Search Bar -->
+    <input type="text" ng-model="searchQuery" placeholder="Search Students">
+
+    <!-- Display students using custom directive -->
+    <div ng-repeat="student in students | filter:searchQuery | orderBy:'name'">
+        <student-card data="student"></student-card>
+    </div>
+</body>
+</html>

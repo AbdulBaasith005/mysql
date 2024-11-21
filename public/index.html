@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="universityApp">
+<head>
+    <title>Register Student</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body ng-controller="RegistrationController">
+    <h1>Student Registration</h1>
+    <form ng-submit="registerStudent()">
+        <label>Name:</label>
+        <input type="text" ng-model="student.name" required><br>
+
+        <label>Year:</label>
+        <input type="text" ng-model="student.year" required><br>
+
+        <label>Course:</label>
+        <input type="text" ng-model="student.course" required><br>
+
+        <label>Department:</label>
+        <input type="text" ng-model="student.department" required><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" ng-model="student.dob" required><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
