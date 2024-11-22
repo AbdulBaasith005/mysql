@@ -1,0 +1,12 @@
+CREATE DATABASE university;
+
+USE university;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    year VARCHAR(10),
+    course VARCHAR(255),
+    department VARCHAR(255),
+    dob DATE
+) ENGINE=InnoDB;
